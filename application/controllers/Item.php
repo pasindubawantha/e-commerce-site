@@ -2,11 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Item extends CI_Controller {
-	public function index($id)
+	public function details($id)
 	{	
 		$this->load->model('ItemModel');
+		$this->load->model('categoryModel');
 		$item = $this->ItemModel->getItemData($id);
-		$this->load->view('Header/header');
+		$categories = $this->categoryModel->getAll();
+
+		$this->load->view('Header/header', array('categories'=>$categories));
 		$this->load->view('Item/ItemView', array('item'=>$item));
 		$this->load->view('Footer/footer');
 	}
