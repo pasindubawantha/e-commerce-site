@@ -1,5 +1,4 @@
 function pickCatogorySearchBar(e){
-	console.log(e.name)
-	$('#search_catogory').text(e.name)
-	$('#search_catogory').attr('catid',e.id)
+	$('#search_catogory_button').text(e.name)
+	$('#search_catogory').attr('value',e.id)
 } 

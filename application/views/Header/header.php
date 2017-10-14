@@ -17,11 +17,11 @@
     </div>
   </div>
   <div class="col-md-8">
-    <form class="form-horizontal" />
+    <form class="form-horizontal" method="get" action="http://localhost:8002/Search"/>
       <div class="form-group">
         <span>
         <div class="col-sm-2 btn-group">
-          <button type="button" class="btn btn-default" id="search_catogory" catId="All">All</button>
+          <button type="button" class="btn btn-default" id="search_catogory_button">All</button>
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="caret"></span>
             <span class="sr-only">Toggle Dropdown</span>
@@ -37,10 +37,11 @@
         </div>
         </span>
         <div class="col-sm-8">
-          <input type="text" class="col-sm-8 form-control" id="search_text" placeholder="Search">
+          <input type="text" name="term" class="col-sm-8 form-control" placeholder="Search">
         </div>
         <button type="submit" class="col-sm-2 btn btn-default"> Search </button>
       </div>
+      <input id="search_catogory" type="text" name="category" value="All" hidden />
     </form>
   </div>
   <div class="col-md-2">

@@ -10,3 +10,10 @@ and run `GRANT ALL PRIVILEGES ON ecommerce.* TO 'ecommerce'@'localhost' WITH GRA
 
 
 [bootstrap theme](https://bootswatch.com/darkly/)
+
+
+// Documentation
+documentation at /docs/
+
+to generate documentation
+run `php phpDocumentor.phar -f . -t docs/api` on root directory 
