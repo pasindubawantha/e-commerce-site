@@ -70,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     	<?php
                     	echo "<option value=".NULL.">All categories</option>";
                     	foreach($categories as $category){
-                    		echo "<option value'".$category->$id."'>".$category->$name."</options>";
+                    		echo "<option value'".$category->id."'>".$category->name."</options>";
                     	}
                     	 ?>
                     </select>
