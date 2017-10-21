@@ -10,9 +10,8 @@ go to phpmyadmin(login as root) >> new databse(named ecommerce) >> import >> cho
 create Mysql for our ecommerce sit by running sql statment as root `CREATE USER 'ecommerce'@'localhost' PASSWORD EXPIRE NEVER;` and run `GRANT ALL PRIVILEGES ON ecommerce.* TO 'ecommerce'@'localhost' WITH GRANT OPTION;`
 
 ## Theme
-[bootstrap theme](https://bootswatch.com/darkly/)
-
-*should find 2 themes, 1 for shop site, 1 for site manager
+* [site theme](https://w3layouts.com/preview/?l=/smart-shop-ecommerce-category-flat-bootstrap-responsive-web-template/)
+*should find admin themes
 
 ## Coding standards
 [PSR-2](http://www.php-fig.org/psr/psr-2/) read important
