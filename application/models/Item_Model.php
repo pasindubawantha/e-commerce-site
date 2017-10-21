@@ -36,4 +36,17 @@ class Item_Model extends CI_Model {
         }
 
     }
+
+    public function getSearchItem($search, $category) {
+        //search query goes here
+        //dummy query
+        $this->db->select('id, name, description, price');
+        $query = $this->db->get('Item');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        }
+        else {
+            return 0;
+        }
+    }
 }

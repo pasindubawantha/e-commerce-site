@@ -36,6 +36,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
 <script src="<?php echo base_url(); ?>assets/js/jquery.easing.min.js"></script>
 </head>
+
+
+
+
+
 <body>
 <!-- header -->
 <div class="header">
@@ -48,46 +53,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <!-- //header -->
+
 <!-- header-bot -->
 <div class="header-bot">
-	<div class="container">
-		<div class="col-md-3 header-left">
-			<h1><a href="Page/index"><img src="<?php echo base_url(); ?>assets/images/logo3.jpg"></a></h1>
-		</div>
-		<div class="col-md-6 header-middle">
-			<form>
-				<div class="search">
-					<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
-				</div>
-				<div class="section_room">
-					<select id="country" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">All categories</option>
-						<option value="null">Electronics</option>
-						<option value="AX">kids Wear</option>
-						<option value="AX">Men's Wear</option>
-						<option value="AX">Women's Wear</option>
-						<option value="AX">Watches</option>
-					</select>
-				</div>
-				<div class="sear-sub">
-					<input type="submit" value=" ">
-				</div>
-				<div class="clearfix"></div>
-			</form>
-		</div>
-		<div class="col-md-3 header-right footer-bottom">
-			<ul>
-				<li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
+    <div class="container">
+        <div class="col-md-3 header-left">
+            <h1><a href="<?php echo base_url(); ?>/Page/index"><img src="<?php echo base_url(); ?>assets/images/logo3.jpg"></a></h1>
+        </div>
+        <div class="col-md-6 header-middle">
+            <?php echo form_open('Page/searchItem'); ?>
+                <div class="search">
+                    <input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required name="search">
+                </div>
+                <div class="section_room">
+                    <select id="country" onchange="change_country(this.value)" class="frm-field required" name="category">
+                        <option value="all">All categories</option>
+                        <option value="electronic">Electronics</option>
+                        <option value="kid">Kids Wear</option>
+                        <option value="men">Men's Wear</option>
+                        <option value="women">Women's Wear</option>
+                        <option value="watch">Watches</option>
+                    </select>
+                </div>
+                <div class="sear-sub">
+                    <input type="submit" value=" " name="submit">
+                </div>
+                <div class="clearfix"></div>
+            <?php echo form_close(); ?>
+        </div>
+        <div class="col-md-3 header-right footer-bottom">
+            <ul>
+                <li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
 
-				</li>
-				<li><a class="fb" href="#"></a></li>
-				<li><a class="twi" href="#"></a></li>
-				<li><a class="insta" href="#"></a></li>
-				<li><a class="you" href="#"></a></li>
-			</ul>
-		</div>
-		<div class="clearfix"></div>
-	</div>
+                </li>
+                <li><a class="fb" href="#"></a></li>
+                <li><a class="twi" href="#"></a></li>
+                <li><a class="insta" href="#"></a></li>
+                <li><a class="you" href="#"></a></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
 </div>
 <!-- //header-bot -->
 <!-- banner -->
