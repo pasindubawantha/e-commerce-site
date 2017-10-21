@@ -11,6 +11,11 @@ class Page extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Category_model');
 	}
+	public function index()
+	{
+		$x = (false or false);
+		echo true;
+	}
 	public function home()
 	{
 		$data['categories'] = $this->Category_model->get_main_categories();
