@@ -9,12 +9,20 @@ class Page extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Category_model');
+		$this->load->model('Item_Model');
 	}
-	public function home()
+	public function index()
 	{
-		$data['categories'] = $this->Category_model->get_main_categories();
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/footer', $data);
+		$data['latest_designs'] = $this->Item_Model->getLatestDesigns();
+		$data['special_offers'] = $this->Item_Model->getSpecialOffers();
+		$data['collections'] = $this->Item_Model->getCollections();
+		$this->load->view('templates/header');
+		$this->load->view('pages/home', $data);
+		$this->load->view('templates/footer');
 	}
+
+	public function singleItem($id) {
+	    $this->load->view('templates/header');
+    }
+
 }
