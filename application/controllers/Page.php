@@ -17,7 +17,8 @@ class Page extends CI_Controller {
 		$data['latest_designs'] = $this->Item_Model->getLatestDesigns();
 		$data['special_offers'] = $this->Item_Model->getSpecialOffers();
 		$data['collections'] = $this->Item_Model->getCollections();
-		$this->load->view('templates/header');
+		$data['categories'] = $this->Category_model->getAllCategories();
+		$this->load->view('templates/header', $data);
 		$this->load->view('pages/home', $data);
 		$this->load->view('templates/footer');
 	}
@@ -30,7 +31,8 @@ class Page extends CI_Controller {
 	    $search = $this->input->post('search');
 	    $category = $this->input->post('category');
 	    $data['items'] = $this->Item_Model->getSearchItem($search, $category);
-	    $this->load->view('templates/header');
+	    $data['categories'] = $this->Category_model->getAllCategories();
+	    $this->load->view('templates/header', $data);
 	    $this->load->view('pages/search', $data);
 	    $this->load->view('templates/footer');
     }

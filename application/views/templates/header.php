@@ -66,13 +66,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required name="search">
                 </div>
                 <div class="section_room">
-                    <select id="country" onchange="change_country(this.value)" class="frm-field required" name="category">
-                        <option value="all">All categories</option>
-                        <option value="electronic">Electronics</option>
-                        <option value="kid">Kids Wear</option>
-                        <option value="men">Men's Wear</option>
-                        <option value="women">Women's Wear</option>
-                        <option value="watch">Watches</option>
+                    <select class="frm-field required" name="category">
+                    	<?php
+                    	echo "<option value=".NULL.">All categories</option>";
+                    	foreach($categories as $category){
+                    		echo "<option value'".$category->$id."'>".$category->$name."</options>";
+                    	}
+                    	 ?>
                     </select>
                 </div>
                 <div class="sear-sub">

@@ -12,9 +12,11 @@ class Category_model extends CI_Model {
 		$this->load->database();
 	}
 
-	public function get_main_categories()
+	public function getAllCategories()
 	{
-
+		$this->db->select('id, name');
+		$query = $this->db->get('Category');
+		return $query->result();
 	}
 
 }
