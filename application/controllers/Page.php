@@ -27,6 +27,7 @@ class Page extends CI_Controller {
 //	    $this->load->view('templates/header');
     }
 
+<<<<<<< HEAD
     public function searchItem() {
 	    $search = $this->input->post('search');
 	    $category = $this->input->post('category');
@@ -36,5 +37,8 @@ class Page extends CI_Controller {
 	    $this->load->view('pages/search', $data);
 	    $this->load->view('templates/footer');
     }
+=======
+
+>>>>>>> 595024b9855c64e98275b47d5758ed1ff182ca96
 
 }
