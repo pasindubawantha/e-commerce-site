@@ -69,4 +69,32 @@ class User_model extends CI_Model {
 		return false;
 	}
 
+	public function checkUserVerified($username){
+		$this->db->select('verified');
+		$query = $this->db->get_where('User', array('user_name' => $username));
+		if(sizeof($query->row_array()) != 0)
+		{
+			if($query->row()->verified) return true;
+		}
+		return false;
+	}
+
+	public function checkUserPassword($username, $password)
+	{
+		$this->db->select('*');
+		$query = $this->db->get_where('User', array('user_name' => $username));
+		if(sizeof($query->row_array()) != 0)
+		{
+			$user = $query->row();
+			$salt = $user->password_salt;
+			$passwordHash = $user->password;
+			$checkHash = hash('sha256', $salt.$password);
+			if($passwordHash == $checkHash)
+			{
+				return $user;
+			}
+		}
+		return false;
+	}
+
 }

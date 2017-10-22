@@ -15,18 +15,28 @@
 </div>
 <div class="login-right">
 	<h3>Sign in with your account</h3>
-	<form>
+	<?php echo form_open('User/login'); ?>
+		<input name="callback_url" value=<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?> hidden>
+
 		<div class="sign-in">
 			<h4>Email :</h4>
-			<input type="emial" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+			<input type="email" name="username" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
 		</div>
+		<?php
+			if($this->session->has_userdata('sign_in_user_not_verified'))
+			echo "<p class='bg-danger'>Email not verified</p>";
+			?>
 		<div class="sign-in">
 			<h4>Password :</h4>
-			<input type="password" onfocus="this.value = '';" required="">
+			<input type="password" name="password" onfocus="this.value = '';" required="">
 			<a href="#">Forgot password?</a>
 		</div>
+		<?php
+			if($this->session->has_userdata('sign_in_password_missmatch'))
+			echo "<p class='bg-danger'>Email password missmatch</p>";
+			?>
 		<div class="single-bottom">
-			<input type="checkbox"  id="brand" value="">
+			<input type="checkbox" name="remember_me"  id="brand" value="">
 			<label for="brand"><span></span>Remember Me.</label>
 		</div>
 		<div class="sign-in">

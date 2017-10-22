@@ -52,10 +52,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 </div-->
 <!-- //header -->
+<!-- header -->
+<!--div class="header">
+	<div class="container">
+
+
+
+	</div>
+</div-->
 
 <!-- header-bot -->
 <div class="header-bot">
     <div class="container">
+    	<?php
+			if($this->session->has_userdata('sign_in_failed'))
+			echo "<div class='alert alert-danger' role='alert'>Sign in failed !</div>";
+			if($this->session->has_userdata('sign_up_failed'))
+			echo "<div class='alert alert-danger' role='alert'>Sign up failed !</div>";
+			if($this->session->has_userdata('sign_in_sucess'))
+			echo "<div class='alert alert-success' role='alert'>Signed in sucefully !</div>";
+			if($this->session->has_userdata('sign_up_sucess'))
+			echo "<div class='alert alert-success' role='alert'>Signed up sucefully ! please verify you email address</div>";
+			if($this->session->has_userdata('logged_off'))
+			echo "<div class='alert alert-success' role='alert'>Logged off sucefully !</div>";
+			?>
         <div class="col-md-3 header-left">
             <h1><a href="<?php echo base_url(); ?>/Page/index"><img src="<?php echo base_url(); ?>assets/images/logo3.jpg"></a></h1>
         </div>

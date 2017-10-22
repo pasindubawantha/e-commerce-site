@@ -101,8 +101,8 @@
 							<div class="login-grids">
 								<div class="login">
 									<?php
-									if($this->session->has_userdata('logged_in') && $this->session->logged_in)
-										echo "logged in";
+									if($this->session->has_userdata('user'))
+										$this->load->view('templates/loggedIn');
 									else $this->load->view('templates/register');
 									?>
 									<div class="clearfix"></div>
