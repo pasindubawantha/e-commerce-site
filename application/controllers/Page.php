@@ -11,6 +11,7 @@ class Page extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Item_Model');
 		$this->load->model('Category_model');
+		$this->load->model('Site_model');
 	}
 	public function index()
 	{
@@ -18,6 +19,7 @@ class Page extends CI_Controller {
 		$data['special_offers'] = $this->Item_Model->getSpecialOffers();
 		$data['collections'] = $this->Item_Model->getCollections();
 		$data['categories'] = $this->Category_model->getAllCategories();
+		$data['site'] = $this->Site_model->getAllSiteData();
 		$this->load->view('templates/header', $data);
 		$this->load->view('pages/home', $data);
 		$this->load->view('templates/footer');

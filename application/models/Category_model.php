@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Category model
  * database layer for categories
+ * @filesource /applicatoin/models/Category_model
  */
 class Category_model extends CI_Model {
 
@@ -11,7 +12,10 @@ class Category_model extends CI_Model {
 	{
 		$this->load->database();
 	}
-
+	/**
+	 * return all searchable categories
+	 * @return class seachable categories
+	 */
 	public function getAllCategories()
 	{
 		$this->db->select('id, name');

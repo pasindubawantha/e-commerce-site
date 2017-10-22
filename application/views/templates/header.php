@@ -7,12 +7,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Smart Shop a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title><?php echo html_escape($site->title); ?></title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Smart Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta name="keywords" content=<?php echo html_escape($site->searchKeywords); ?> />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
@@ -43,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 <!-- header -->
-<div class="header">
+<!--div class="header">
 	<div class="container">
 		<ul>
 			<li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Free and Fast Delivery</li>
@@ -51,7 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">info@example.com</a></li>
 		</ul>
 	</div>
-</div>
+</div-->
 <!-- //header -->
 
 <!-- header-bot -->
@@ -61,16 +60,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h1><a href="<?php echo base_url(); ?>/Page/index"><img src="<?php echo base_url(); ?>assets/images/logo3.jpg"></a></h1>
         </div>
         <div class="col-md-6 header-middle">
-            <?php echo form_open('Page/searchItem'); ?>
+            <?php echo form_open('Search/searchItem'); ?>
                 <div class="search">
                     <input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required name="search">
                 </div>
                 <div class="section_room">
                     <select class="frm-field required" name="category">
                     	<?php
-                    	echo "<option value=".NULL.">All categories</option>";
+                    	echo "<option value='".NULL."'>All categories</option>";
                     	foreach($categories as $category){
-                    		echo "<option value'".$category->id."'>".$category->name."</options>";
+                    		echo "<option value='".$category->id."'>".html_escape($category->name)."</options>";
                     	}
                     	 ?>
                     </select>
@@ -86,10 +85,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
 
                 </li>
-                <li><a class="fb" href="#"></a></li>
-                <li><a class="twi" href="#"></a></li>
-                <li><a class="insta" href="#"></a></li>
-                <li><a class="you" href="#"></a></li>
+
+                <?php
+                if($site->facebookURL != "#") echo "<li><a class='fb' href=$site->facebookURL ></a></li>";
+                if($site->twitterURL != "#") echo "<li><a class='twi' href=$site->twitterURL ></a></li>";
+                if($site->instagramURL != "#") echo "<li><a class='insta' href=$site->instagramURL ></a></li>";
+                if($site->youtubeURL != "#") echo "<li><a class='you' href=$site->youtubeURL ></a></li>";
+                ?>
             </ul>
         </div>
         <div class="clearfix"></div>

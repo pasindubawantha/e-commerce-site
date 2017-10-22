@@ -1451,7 +1451,7 @@ a.single-item{
     width: 46%;
     margin: 0 2%;
 }
-.login-right input[type="text"] ,.login-right input[type="password"] ,.login-bottom input[type="text"] ,.login-bottom input[type="password"]{
+.login-right input[type="text"] ,.login-right input ,.login-right input[type="password"] ,.login-bottom input[type="text"] ,.login-bottom input[type="password"], .login-bottom input{
     width: 100%;
     padding: 10px;
     font-weight: normal;
