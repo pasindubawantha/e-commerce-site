@@ -12,7 +12,8 @@ class Search extends CI_Controller {
         $search = $this->input->post('search');
         $category = $this->input->post('category');
         $data['items'] = $this->Item_Model->getSearchItem($search, $category);
-        $this->load->view('templates/header');
+        $data['site'] = $this->Site_model->getAllSiteData();
+        $this->load->view('templates/header',$data);
         $this->load->view('pages/search', $data);
         $this->load->view('templates/footer');
     }

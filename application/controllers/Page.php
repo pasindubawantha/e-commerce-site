@@ -18,11 +18,16 @@ class Page extends CI_Controller {
 		$data['latest_designs'] = $this->Item_Model->getLatestDesigns();
 		$data['special_offers'] = $this->Item_Model->getSpecialOffers();
 		$data['collections'] = $this->Item_Model->getCollections();
-		$data['categories'] = $this->Category_model->getAllCategories();
+		$data['mainCategories'] = $this->Category_model->getMainCatergoryies();
+		$data['subCategories'] = $this->Category_model->getCategoryHeighrachy();
 		$data['site'] = $this->Site_model->getAllSiteData();
 		$this->load->view('templates/header', $data);
 		$this->load->view('pages/home', $data);
 		$this->load->view('templates/footer');
+	}
+	public function contactUs()
+	{
+		echo "contactUS";
 	}
 
 	public function singleItem($id) {

@@ -18,9 +18,30 @@ class Category_model extends CI_Model {
 	 */
 	public function getAllCategories()
 	{
-		$this->db->select('id, name');
+		$this->db->select('id, name,');
 		$query = $this->db->get('Category');
 		return $query->result();
+	}
+	public function getMainCatergoryies()
+	{
+		$this->db->select('*');
+		$query = $this->db->get_where('Category', array('parent_category' => null));
+		return $query->result();
+	}
+	public function getSubCategories($mainCategoryId)
+	{
+		$this->db->select('*');
+		$query = $this->db->get_where('Category', array('parent_category' => $mainCategoryId));
+		return $query->result();
+	}
+	public function getCategoryHeighrachy()
+	{
+		$categories = $this->getMainCatergoryies();
+		foreach($categories as $category)
+		{
+			$sub[$category->id] =  $this->getSubCategories($category->id);
+		}
+		return $sub;
 	}
 
 }
