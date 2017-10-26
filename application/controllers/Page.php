@@ -31,7 +31,14 @@ class Page extends CI_Controller {
 	}
 
 	public function singleItem($id) {
-//	    $this->load->view('templates/header');
+	    $data['single'] = $this->Item_Model->getSingleItem($id);
+	    $data['images'] = $this->Item_Model->getSingleItemImg($id);
+        $data['mainCategories'] = $this->Category_model->getMainCatergoryies();
+        $data['subCategories'] = $this->Category_model->getCategoryHeighrachy();
+        $data['site'] = $this->Site_model->getAllSiteData();
+	    $this->load->view('templates/header', $data);
+	    $this->load->view('pages/single', $data);
+	    $this->load->view('templates/footer');
     }
 
 }

@@ -49,4 +49,18 @@ class Item_Model extends CI_Model {
             return 0;
         }
     }
+
+    public function getSingleItem($id) {
+        $query = $this->db->get_where('Item', array('id' => $id));
+        if ($query->num_rows() > 0) {
+            return $query->row();
+        }
+        else {
+            return 0;
+        }
+    }
+
+    public function getSingleItemImg($id) {
+        return 1;
+    }
 }
