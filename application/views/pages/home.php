@@ -40,7 +40,6 @@
                                         <h4><a href='Page/singleItem/" . $item->id . "'>" . $item->description . "</a> </h4>
                                         <div class='info-product-price'>
                                             <span class='item_price'>" . $item->price . "</span>
-                                            <del>" . $item->price . "</del>
                                         </div>
                                         <a href='#' class='item_add single-item hvr-outline-out button2'>Add to cart</a>
                                     </div>

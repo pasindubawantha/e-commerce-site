@@ -24,12 +24,12 @@
                             <img src='" . base_url() . "assets/images/" . $item->name . "' alt='Dummy Image Back' class='pro-image-back'>
                             <div class='men-cart-pro'>
                                 <div class='inner-men-cart-pro'>
-                                    <a href='Page/singleItem/" . $item->id . "' class='link-product-add-cart'>Quick View</a>                                           
+                                    <a href='" . base_url() . "/Page/singleItem/" . $item->id . "' class='link-product-add-cart'>Quick View</a>                                           
                                 </div>
                             </div>
                         </div>
                         <div class='item-info-product'>
-                            <h4><a href='Page/singleItem/" . $item->id . "'>" . $item->description . "</a> </h4>
+                            <h4><a href='" . base_url() . "/Page/singleItem/" . $item->id . "'>" . $item->description . "</a> </h4>
                             <div class='info-product-price'>
                                 <span class='item_price'>" . $item->price . "</span>
                                 <del>" . $item->price . "</del>
