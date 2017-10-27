@@ -101,17 +101,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <?php echo form_close(); ?>
         </div>
         <div class="col-md-3 header-right footer-bottom">
-            <ul>
-                <li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
+            <ul style="float: left; padding-left: 52px;">
+                <li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4" style="float: left"><span>Login</span></a>
 
                 </li>
 
-                <?php
-                if($site->facebookURL != "#") echo "<li><a class='fb' href=$site->facebookURL ></a></li>";
-                if($site->twitterURL != "#") echo "<li><a class='twi' href=$site->twitterURL ></a></li>";
-                if($site->instagramURL != "#") echo "<li><a class='insta' href=$site->instagramURL ></a></li>";
-                if($site->youtubeURL != "#") echo "<li><a class='you' href=$site->youtubeURL ></a></li>";
-                ?>
+<!--                --><?php
+//                if($site->facebookURL != "#") echo "<li><a class='fb' href=$site->facebookURL ></a></li>";
+//                if($site->twitterURL != "#") echo "<li><a class='twi' href=$site->twitterURL ></a></li>";
+//                if($site->instagramURL != "#") echo "<li><a class='insta' href=$site->instagramURL ></a></li>";
+//                if($site->youtubeURL != "#") echo "<li><a class='you' href=$site->youtubeURL ></a></li>";
+//                ?>
             </ul>
         </div>
         <div class="clearfix"></div>

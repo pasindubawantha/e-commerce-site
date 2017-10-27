@@ -20,8 +20,8 @@
                 "<div class='col-md-3 product-men yes-marg'>
                     <div class='men-pro-item simpleCart_shelfItem'>
                         <div class='men-thumb-item'>
-                            <img src='" . base_url() . "assets/images/" . $item->name . "' alt='Dummy Image' class='pro-image-front'>
-                            <img src='" . base_url() . "assets/images/" . $item->name . "' alt='Dummy Image Back' class='pro-image-back'>
+                            <img src='" . base_url() . "assets/images/items/" . $item->id . "/icon.jpg' alt='Dummy Image' class='pro-image-front'>
+                            <img src='" . base_url() . "assets/images/items/" . $item->id . "/icon.jpg' alt='Dummy Image Back' class='pro-image-back'>
                             <div class='men-cart-pro'>
                                 <div class='inner-men-cart-pro'>
                                     <a href='" . base_url() . "/Page/singleItem/" . $item->id . "' class='link-product-add-cart'>Quick View</a>                                           
@@ -31,7 +31,7 @@
                         <div class='item-info-product'>
                             <h4><a href='" . base_url() . "/Page/singleItem/" . $item->id . "'>" . $item->description . "</a> </h4>
                             <div class='info-product-price'>
-                                <span class='item_price'>" . $item->price . "</span>
+                                <span>Rs. </span><span class='item_price'>" . $item->price . "</span>
                                 <del>" . $item->price . "</del>
                             </div>
                             <a href='#' class='item_add single-item hvr-outline-out button2'>Add to cart</a>

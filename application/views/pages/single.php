@@ -15,22 +15,22 @@
                     </script>
                     <!-- //FlexSlider-->
                     <ul class="slides">
-<!--                        --><?php //foreach ($images as $img) {
-//                            echo "<li data-thum='" . base_url() . "/assets/images/$img->name'>
-//                            <div class='thumb-image'> <img src='" . base_url() . "/assets/images/$img->name' data-imagezoom=''true' class='img-responsive'> </div>
-//                            </li>";
-//                        }  ?>
-<!--                        <li data-thumb="images/d2.jpg">-->
-<!--                            <div class="thumb-image"> <img src="images/d2.jpg" data-imagezoom="true" class="img-responsive"> </div>-->
-<!--                        </li>-->
-<!--                        <li data-thumb="images/d1.jpg">-->
-<!--                            <div class="thumb-image"> <img src="images/d1.jpg" data-imagezoom="true" class="img-responsive"> </div>-->
-<!--                        </li>-->
-<!--                        <li data-thumb="images/d3.jpg">-->
-<!--                            <div class="thumb-image"> <img src="images/d3.jpg" data-imagezoom="true" class="img-responsive"> </div>-->
-<!--                        </li>-->
-<!--                        <li data-thumb="images/d4.jpg">-->
-<!--                            <div class="thumb-image"> <img src="images/d4.jpg" data-imagezoom="true" class="img-responsive"> </div>-->
+                        <?php foreach ($images as $img) {
+                            echo "<li data-thum='" . base_url() . "/assets/images/$img->name'>
+                            <div class='thumb-image'> <img src='" . base_url() . "assets/images/items/" . $img->id . "/icon.jpg' data-imagezoom=''true' class='img-responsive'> </div>
+                            </li>";
+                        }  ?>
+                        <li data-thumb="images/d2.jpg">
+                            <div class="thumb-image"> <img src="images/d2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                        </li>
+                        <li data-thumb="images/d1.jpg">
+                            <div class="thumb-image"> <img src="images/d1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                        </li>
+                        <li data-thumb="images/d3.jpg">
+                            <div class="thumb-image"> <img src="images/d3.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                        </li>
+                        <li data-thumb="images/d4.jpg">
+                            <div class="thumb-image"> <img src="images/d4.jpg" data-imagezoom="true" class="img-responsive"> </div>
 <!--                        </li>-->
                     </ul>
                     <div class="clearfix"></div>
@@ -39,7 +39,7 @@
         </div>
         <div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
             <h3><?php echo $single->name; ?></h3>
-            <p><span class="item_price">Rs. <?php echo $single->price; ?></span></p>
+            <p><span>Rs. </span><span class="item_price"><?php echo $single->price; ?></span></p>
             <p><?php echo $single->description; ?></p>
             <div class="rating1">
 						<span class="starRating">

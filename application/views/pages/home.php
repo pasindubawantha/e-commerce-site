@@ -15,9 +15,9 @@
         <div class="sap_tabs">
             <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                 <ul class="resp-tabs-list">
-                    <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Latest Designs</span></li>
+                    <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>New In Stock</span></li>
                     <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Special Offers</span></li>
-                    <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Collections</span></li>
+                    <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Signatures</span></li>
                 </ul>
                 <div class="resp-tabs-container">
                     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
@@ -28,8 +28,8 @@
                             "<div class='col-md-3 product-men yes-marg'>
                                 <div class='men-pro-item simpleCart_shelfItem'>
                                     <div class='men-thumb-item'>
-                                        <img src='" . base_url() . "assets/images/" . $item->name . "' alt='Dummy Image' class='pro-image-front'>
-                                        <img src='" . base_url() . "assets/images/" . $item->name . "' alt='Dummy Image Back' class='pro-image-back'>
+                                        <img src='" . base_url() . "assets/images/items/" . $item->id . "/icon.jpg' alt='Dummy Image' class='pro-image-front'>
+                                        <img src='" . base_url() . "assets/images/items/" . $item->id . "/icon.jpg' alt='Dummy Image Back' class='pro-image-back'>
                                         <div class='men-cart-pro'>
                                             <div class='inner-men-cart-pro'>
                                                 <a href='Page/singleItem/" . $item->id . "' class='link-product-add-cart'>Quick View</a>                                           
@@ -39,7 +39,7 @@
                                     <div class='item-info-product'>
                                         <h4><a href='Page/singleItem/" . $item->id . "'>" . $item->description . "</a> </h4>
                                         <div class='info-product-price'>
-                                            <span class='item_price'>" . $item->price . "</span>
+                                            <span>Rs. </span><span class='item_price'>" . $item->price . "</span>
                                         </div>
                                         <a href='#' class='item_add single-item hvr-outline-out button2'>Add to cart</a>
                                     </div>
@@ -58,8 +58,8 @@
                                 "<div class='col-md-3 product-men yes-marg'>
                                 <div class='men-pro-item simpleCart_shelfItem'>
                                     <div class='men-thumb-item'>
-                                        <img src='" . base_url() . "assets/images/" . $item->name . "' alt='Dummy Image' class='pro-image-front'>
-                                        <img src='" . base_url() . "assets/images/" . $item->name . "' alt='Dummy Image Back' class='pro-image-back'>
+                                        <img src='" . base_url() . "assets/images/items/" . $item->id . "/icon.jpg' alt='Dummy Image' class='pro-image-front'>
+                                        <img src='" . base_url() . "assets/images/items/" . $item->id . "/icon.jpg' alt='Dummy Image Back' class='pro-image-back'>
                                         <div class='men-cart-pro'>
                                             <div class='inner-men-cart-pro'>
                                                 <a href='Page/singleItem/" . $item->id . "' class='link-product-add-cart'>Quick View</a>                                           
@@ -69,8 +69,7 @@
                                     <div class='item-info-product'>
                                         <h4><a href='Page/singleItem/" . $item->id . "'>" . $item->description . "</a> </h4>
                                         <div class='info-product-price'>
-                                            <span class='item_price'>" . $item->price . "</span>
-                                            <del>" . $item->price . "</del>
+                                            <span>Rs. </span><span class='item_price'>" . $item->price . "</span>
                                         </div>
                                         <a href='#' class='item_add single-item hvr-outline-out button2'>Add to cart</a>
                                     </div>
@@ -89,8 +88,8 @@
                                 "<div class='col-md-3 product-men yes-marg'>
                                 <div class='men-pro-item simpleCart_shelfItem'>
                                     <div class='men-thumb-item'>
-                                        <img src='" . base_url() . "assets/images/" . $item->name . "' alt='Dummy Image' class='pro-image-front'>
-                                        <img src='" . base_url() . "assets/images/" . $item->name . "' alt='Dummy Image Back' class='pro-image-back'>
+                                        <img src='" . base_url() . "assets/images/items/" . $item->id . "/icon.jpg' alt='Dummy Image' class='pro-image-front'>
+                                        <img src='" . base_url() . "assets/images/items/" . $item->id . "/icon.jpg' alt='Dummy Image Back' class='pro-image-back'>
                                         <div class='men-cart-pro'>
                                             <div class='inner-men-cart-pro'>
                                                 <a href='Page/singleItem/" . $item->id . "' class='link-product-add-cart'>Quick View</a>                                           
@@ -100,8 +99,7 @@
                                     <div class='item-info-product'>
                                         <h4><a href='Page/singleItem/" . $item->id . "'>" . $item->description . "</a> </h4>
                                         <div class='info-product-price'>
-                                            <span class='item_price'>" . $item->price . "</span>
-                                            <del>" . $item->price . "</del>
+                                            <span>Rs. </span><span class='item_price'>" . $item->price . "</span>
                                         </div>
                                         <a href='#' class='item_add single-item hvr-outline-out button2'>Add to cart</a>
                                     </div>
