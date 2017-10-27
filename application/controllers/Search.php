@@ -8,7 +8,6 @@ class Search extends CI_Controller {
         $this->load->model('Item_Model');
         $this->load->model('Category_model');
     }
-
     public function searchItem() {
         $search = $this->input->post('search');
         $category = $this->input->post('category');
