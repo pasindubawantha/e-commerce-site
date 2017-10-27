@@ -77,7 +77,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			echo "<div class='alert alert-success' role='alert'>Logged off sucefully !</div>";
 			?>
         <div class="col-md-3 header-left">
-            <h1><a href="<?php echo base_url(); ?>/Page/index"><img src="<?php echo base_url(); ?>assets/images/logo3.jpg"></a></h1>
+            <h1><a href="<?php echo base_url(); ?>/Page/index"><img src="<?php echo base_url(); ?>/assets/images/branding/logo.jpg"></a></h1>
         </div>
         <div class="col-md-6 header-middle">
             <?php echo form_open('Search/searchItem'); ?>

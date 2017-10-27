@@ -7,7 +7,6 @@ class Search extends CI_Controller {
         parent::__construct();
         $this->load->model('Item_Model');
     }
-
     public function searchItem() {
         $search = $this->input->post('search');
         $category = $this->input->post('category');
