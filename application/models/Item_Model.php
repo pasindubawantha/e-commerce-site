@@ -64,7 +64,9 @@ class Item_Model extends CI_Model {
         }
     }
 
-    public function getSingleItemImg($id) {
-        return 1;
+    public function getSingleItemImg($ItemId) {
+        $this->db->order_by('priority', 'ASC');
+        $query = $this->db->get_where('Item_Image', array('Item_id' => $ItemId));
+        return $query->result();
     }
 }

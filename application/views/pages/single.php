@@ -15,23 +15,14 @@
                     </script>
                     <!-- //FlexSlider-->
                     <ul class="slides">
-                        <?php foreach ($images as $img) {
-                            echo "<li data-thum='" . base_url() . "/assets/images/$img->name'>
-                            <div class='thumb-image'> <img src='" . base_url() . "assets/images/items/" . $img->id . "/icon.jpg' data-imagezoom=''true' class='img-responsive'> </div>
-                            </li>";
-                        }  ?>
-                        <li data-thumb="images/d2.jpg">
-                            <div class="thumb-image"> <img src="images/d2.jpg" data-imagezoom="true" class="img-responsive"> </div>
-                        </li>
-                        <li data-thumb="images/d1.jpg">
-                            <div class="thumb-image"> <img src="images/d1.jpg" data-imagezoom="true" class="img-responsive"> </div>
-                        </li>
-                        <li data-thumb="images/d3.jpg">
-                            <div class="thumb-image"> <img src="images/d3.jpg" data-imagezoom="true" class="img-responsive"> </div>
-                        </li>
-                        <li data-thumb="images/d4.jpg">
-                            <div class="thumb-image"> <img src="images/d4.jpg" data-imagezoom="true" class="img-responsive"> </div>
-<!--                        </li>-->
+                        <?php
+                            foreach ($images as $img)
+                            {
+                                echo "<li data-thumb='".base_url()."assets/images/items/".$single->id."/".$img->uri_name."'>";
+                                echo "<div class='thumb-image'> <img src='".base_url()."assets/images/items/".$single->id."/".$img->uri_name."' data-imagezoom='true' class='img-responsive'> </div></li>";
+                            }
+                        ?>
+
                     </ul>
                     <div class="clearfix"></div>
                 </div>

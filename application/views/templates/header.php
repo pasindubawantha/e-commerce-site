@@ -16,14 +16,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?php echo base_url(); ?>assets/css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet"  href="<?php echo base_url(); ?>assets/css/flexslider.css"    type="text/css" media="screen" />
+    <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- pignose css -->
-<link href="<?php echo base_url(); ?>assets/css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
+
+
 
 
 <!-- //pignose css -->
-<link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
 <!-- js -->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-2.1.4.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/imagezoom.js"  ></script>
+    <script src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"  ></script>
 <!-- //js -->
 <!-- cart -->
 	<script src="<?php echo base_url(); ?>assets/js/simpleCart.min.js"></script>
@@ -106,12 +112,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                 </li>
 
-<!--                --><?php
-//                if($site->facebookURL != "#") echo "<li><a class='fb' href=$site->facebookURL ></a></li>";
-//                if($site->twitterURL != "#") echo "<li><a class='twi' href=$site->twitterURL ></a></li>";
-//                if($site->instagramURL != "#") echo "<li><a class='insta' href=$site->instagramURL ></a></li>";
-//                if($site->youtubeURL != "#") echo "<li><a class='you' href=$site->youtubeURL ></a></li>";
-//                ?>
+            <?php
+                if($site->facebookURL != "#") echo "<li><a class='fb' href=$site->facebookURL ></a></li>";
+                if($site->twitterURL != "#") echo "<li><a class='twi' href=$site->twitterURL ></a></li>";
+                if($site->instagramURL != "#") echo "<li><a class='insta' href=$site->instagramURL ></a></li>";
+                if($site->youtubeURL != "#") echo "<li><a class='you' href=$site->youtubeURL ></a></li>";
+                ?>
             </ul>
         </div>
         <div class="clearfix"></div>
